@@ -6,9 +6,9 @@ import scipy.stats
 chat_id = 704471350
 
 def solution(p: float, x: np.array) -> tuple:
-    alpha = 1 - p
-    z1 = scipy.stats.chi2.ppf(alpha, df=2*len(x))
-    z2 = scipy.stats.chi2.ppf(1-alpha, df=2*len(x))
+    alpha = 1-p
+    z1 = scipy.stats.chi2.ppf(alpha/2, df=2*len(x))
+    z2 = scipy.stats.chi2.ppf((1-alpha)/2, df=2*len(x))
 
     r = np.power(x,2)
 
