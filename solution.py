@@ -12,6 +12,6 @@ def solution(p: float, x: np.array) -> tuple:
 
     r = np.power(x,2)
 
-    z_end = sqrt( sum(r)/z1*37 )
-    z_begin = sqrt( sum(r)/z2*37 )
+    z_end = sqrt( sum(r)/(z1*37) )
+    z_begin = sqrt( sum(r)/(z2*37) )
     return z_begin, z_end
